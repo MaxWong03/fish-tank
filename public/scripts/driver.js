@@ -18,7 +18,19 @@ $(() => {
     tank: window.fishtank,
     position: new Vector(260, 0)
   });
-
+  let pyu2 = new Pyu({
+    tank: window.fishtank,
+    position: new Vector(-90,-30)
+  });
+  let octillery2 = new Octillery({
+    tank: window.fishtank,
+    position: new Vector(-160,-15)
+  });
+  let tentacrool2 = new Tentacrool({
+    tank: window.fishtank,
+    position: new Vector(-260, 0)
+  });
+  
 });
 
 
