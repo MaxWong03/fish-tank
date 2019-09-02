@@ -1,12 +1,12 @@
-class Fish extends Denizen {
-
+class FloorLives extends Denizen {
   constructor(options) {
     super(options);
-    this.imageUri = '/images/magikarp-f.gif';
+    this.imgUri = '/images/fish01.png';
     this.maxSwimSpeed = 100;
     this.makeNewVelocity();
     this.isTasty = true;
   }
+
 
   generateSwimVelocity(max, min) {
     if (min && min > max) {
@@ -32,6 +32,4 @@ class Fish extends Denizen {
     this.swimVelocity = this.generateSwimVelocity(this.maxSwimSpeed, minMag || 0);
     this.timeUntilSpeedChange = randRangeInt(5);
   }
-
 }
-
