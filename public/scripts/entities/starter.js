@@ -5,7 +5,7 @@ class Starter extends Denizen {
     this.height = 100;
     this.width = 100;
     this.imageUri = '/images/camerupt-mega.gif';
-    this.position.y += this.height;
+    this.position.y += this.height - 50;
   }
 
   update(t) {
