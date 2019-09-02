@@ -1,35 +1,18 @@
-class FloorLives extends Denizen {
+class FloorLives extends Starter {
+
   constructor(options) {
     super(options);
-    this.imgUri = '/images/fish01.png';
-    this.maxSwimSpeed = 100;
-    this.makeNewVelocity();
-    this.isTasty = true;
+    this.imageUri = '/images/pyukumuku.gif';
+    this.height = 50;
+    this.width = 50;
+    this.isTasty = false;
+  }
+
+  onClick(event){
+    //no on click for floorlives
   }
 
 
-  generateSwimVelocity(max, min) {
-    if (min && min > max) {
-      min = 0;
-    }
-    var newSpeed = new Vector(randRangeInt(-max, max), randRangeInt(-max / 2, max / 2));
-    while (min && newSpeed.magnitude() < min) {
-      newSpeed = new Vector(randRangeInt(-max, max), randRangeInt(-max / 2, max / 2));
-    }
-    return newSpeed;
-  }
-
-  updateOneTick() {
-    var delta = this.swimVelocity.scale(PHYSICS_TICK_SIZE_S);
-    this.position.addMut(delta);
-    this.timeUntilSpeedChange -= PHYSICS_TICK_SIZE_S;
-    if (this.timeUntilSpeedChange < 0) {
-      this.makeNewVelocity();
-    }
-  }
-
-  makeNewVelocity(minMag) {
-    this.swimVelocity = this.generateSwimVelocity(this.maxSwimSpeed, minMag || 0);
-    this.timeUntilSpeedChange = randRangeInt(5);
-  }
+  
 }
+
